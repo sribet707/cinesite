@@ -22,14 +22,11 @@ def print_sequences_frame_range(path):
     seq_list = FileSequence.findSequencesOnDisk(pattern)
 
     for seq in seq_list:
-
-        # examples have shown that invalid sequences were considered:
-        # - for sequence which name contains the character '.'
-        # - for sequence for which the start frame is 0001
-        if '.' not in seq.basename()[:-1] and seq.start() == 1001:
+        # assumption (own decision): name should not include any '.' character
+        if '.' not in seq.basename()[:-1]:
             logging.info("%s: %s"%(seq.basename()[:-1], seq.frameSet()))
         else:
-            logging.debug("Invalid sequence name and/or frame range for found sequence %s"%str(seq).split('/')[-1])
+            logging.debug("Invalid sequence name for found sequence %s"%str(seq).split('/')[-1])
 
     return
 
