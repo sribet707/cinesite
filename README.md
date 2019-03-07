@@ -67,6 +67,8 @@ I opted for prman (on Mac OS): https://renderman.pixar.com/install
 The file custom_render.py contains the implementation of the UI. 
 It works as a plugin in 'it': https://rmanwiki.pixar.com/pages/viewpage.action?pageId=30474445
 
+The repository contains resulting screenshots.
+
 When Pixar's RenderMan is installed, in my case, it created a folder named "RenderManProServer-22.3" with the following structure: 
 - bin
 - etc
@@ -82,5 +84,3 @@ In order for 'it' to detect the script, the following should be added to 'Render
     # This extension can be accessed from the Console command line and 
     # and renders a sphere/teacup from user selected color & displays it
     LoadExtension python [file join $pydir custom_render.py]
-
-
