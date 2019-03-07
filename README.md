@@ -47,3 +47,15 @@ The regex could potentially (not robust to "weird" file naming such as names wit
     seq_regex = re.compile("(\w+)\.(\d{4})\.(\w+)")
 
 Then the frames could have been processed to determinate the first frame, the end frame and gaps if any. 
+
+
+**** PyQt/rendering/installation test *****
+- Download and install Prman or Arnold (prman is free for Non-commercial use, Arnold renders images with watermarks)
+- Write a PyQt dialog that has the following elements:
+  - a view for displaying rendered image
+  - a view for displaying output log of the renderer
+  - a color picker to change the color of the objects in the scene
+  - a render button
+- When user clicks render button, the program should use renderer python API to render a sphere/teapot with user-defined color and display image and the log in the UI. Please note that you are not expected to write a custom display driver for prman/arnold - you should simply render to disk and load image into the UI.
+
+==> repository "render"
