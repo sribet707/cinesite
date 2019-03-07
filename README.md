@@ -39,6 +39,8 @@ Some unrequested additional material have been made to this: including parsing a
 The repository "frame_range" thus includes a script (framerange.py) that can be called from command line and that does print frame ranges for animated sequences in given directory. 
 Usage: python framerange.py </path/to/directory/>
 
+It also includes sequence examples. 
+
 Another solution (not using fileseq) could have been to parse the directory and use a regex to find sequences which would match the format name.####.ext. 
 The regex could potentially (not robust to "weird" file naming such as names with whitespaces or characters like '.') have been:
 
