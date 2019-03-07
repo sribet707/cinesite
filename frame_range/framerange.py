@@ -2,7 +2,6 @@ import logging
 import sys
 import argparse
 import os
-import re
 
 from fileseq import filesequence
 from fileseq.filesequence import FileSequence
